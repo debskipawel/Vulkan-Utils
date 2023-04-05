@@ -27,6 +27,7 @@ project "glm"
 project "VulkanApp"
 	kind "ConsoleApp"
 	language "C++"
+	cppdialect "C++20"
 	location "src/VulkanApp"
     targetdir "bin/%{cfg.buildcfg}"
 
@@ -36,7 +37,8 @@ project "VulkanApp"
 	includedirs { 
 		"dependencies/glm/include", 
 		"dependencies/glfw/include",
-		_OPTIONS["vulkan-inc"]
+		_OPTIONS["vulkan-inc"],
+		"%{prj.location}"
 	}
 
 	filter { "configurations:Debug" }
