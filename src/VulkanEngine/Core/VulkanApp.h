@@ -1,5 +1,6 @@
 #pragma once
 
+#include <Core/ClientAppLayer.h>
 #include <Utils/Clock.h>
 #include <Window/VulkanWindow.h>
 
@@ -22,4 +23,5 @@ protected:
 	Timepoint m_LastFrameTime;
 
 	std::unique_ptr<VulkanWindow> m_Window;
+	std::shared_ptr<ClientAppLayer> m_ClientApp;
 };

@@ -10,6 +10,7 @@ void VulkanApp::Initialize()
 	Clock::Initialize();
 
 	m_Window = std::make_unique<VulkanWindow>(800, 600, "Vulkan window");
+	m_ClientApp = CreateClientAppLayer();
 }
 
 void VulkanApp::Run()
@@ -30,6 +31,7 @@ void VulkanApp::Run()
 
 void VulkanApp::OnUpdate(Timepoint dt)
 {
+	m_ClientApp->OnUpdate();
 	m_Window->PollEvents();
 
 	m_ShouldRun = !m_Window->Closed();
@@ -37,4 +39,5 @@ void VulkanApp::OnUpdate(Timepoint dt)
 
 void VulkanApp::OnRender(Timepoint dt)
 {
+	m_ClientApp->OnRender();
 }

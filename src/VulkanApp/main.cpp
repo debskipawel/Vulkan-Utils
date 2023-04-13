@@ -1,20 +1,24 @@
-#include <Core/VulkanApp.h>
-
 #include <stdexcept>
 #include <iostream>
 
-int main()
-{
-    try
-    {
-        VulkanApp app;
-        app.Run();
-    }
-    catch (std::runtime_error e)
-    {
-        std::cout << "Runtime error: " << e.what() << std::endl;
-        return -1;
-    }
+#include <Entrypoint.h>
 
-    return 0;
+class DerivedClientAppLayer : public ClientAppLayer
+{
+public:
+	virtual void OnUpdate() override
+	{
+		m_Counter++;
+	}
+
+	virtual void OnRender() override
+	{
+	}
+private:
+	inline static int m_Counter = 0;
+};
+
+std::shared_ptr<ClientAppLayer> CreateClientAppLayer()
+{
+	return std::make_shared<DerivedClientAppLayer>();
 }
