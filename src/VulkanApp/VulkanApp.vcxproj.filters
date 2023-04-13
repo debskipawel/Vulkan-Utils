@@ -7,9 +7,6 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{F68B420E-62A0-6ABF-2B22-0E1F97F566F0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Window">
-      <UniqueIdentifier>{3DEA79DA-298C-A4B0-1247-B804FE872B01}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\VulkanApp.h">
@@ -24,9 +21,6 @@
     <ClInclude Include="Utils\Timepoint.h">
       <Filter>Utils</Filter>
     </ClInclude>
-    <ClInclude Include="Window\VulkanAppWindow.h">
-      <Filter>Window</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\VulkanApp.cpp">
@@ -37,9 +31,6 @@
     </ClCompile>
     <ClCompile Include="Utils\Timepoint.cpp">
       <Filter>Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="Window\VulkanAppWindow.cpp">
-      <Filter>Window</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
   </ItemGroup>

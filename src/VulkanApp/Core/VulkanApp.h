@@ -1,7 +1,7 @@
 #pragma once
 
 #include <Utils/Clock.h>
-#include <Window/VulkanAppWindow.h>
+#include <Window/VulkanWindow.h>
 
 #include <memory>
 
@@ -21,5 +21,5 @@ protected:
 	bool m_ShouldRun = true;
 	Timepoint m_LastFrameTime;
 
-	std::unique_ptr<VulkanAppWindow> m_Window;
+	std::unique_ptr<VulkanWindow> m_Window;
 };

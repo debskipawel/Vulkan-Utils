@@ -9,7 +9,7 @@ void VulkanApp::Initialize()
 {
 	Clock::Initialize();
 
-	m_Window = std::make_unique<VulkanAppWindow>(800, 600, "Vulkan window");
+	m_Window = std::make_unique<VulkanWindow>(800, 600, "Vulkan window");
 }
 
 void VulkanApp::Run()
